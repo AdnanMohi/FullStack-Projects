@@ -1,0 +1,16 @@
+.message-container {
+  max-height: 300px ;
+  overflow-y: auto ;
+  border: 1px solid #c35b5b;
+  padding: 10px ;
+  margin-bottom: 10px;
+}
+
+.message-row {
+  display: flex ;
+  justify-content: space-between ;
+  margin-bottom: 10px;
+}
+
+
+
