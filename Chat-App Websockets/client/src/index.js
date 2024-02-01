@@ -1,21 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {BrowserRouter} from "react-router-dom"
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import InputPage from './components/UserInputField';
+import ChatRoomPage from './components/chat-room';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const root = document.getElementById('root');
+
+ReactDOM.createRoot(root).render(
   <React.StrictMode>
-    <BrowserRouter> 
-      <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<InputPage />} />
+        <Route path="/chat/:username" element={<ChatRoomPage />} />
+      </Routes>
     </BrowserRouter>
- 
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

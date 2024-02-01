@@ -25,9 +25,10 @@ io.on("connection", client => {
   });
 
   client.on("disconnect", () => {
-    const username = users[client.id];
-    delete users[client.id];
-    io.emit("disconnected", client.id);
+    const disconnectedUser = users[client.id];
+  delete users[client.id];
+  io.emit("disconnected", client.id);
+  io.emit("users", Object.values(users));
   });
 });
 server.listen(3000, () => console.log('port 3000'));
