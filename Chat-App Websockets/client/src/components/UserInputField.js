@@ -33,7 +33,7 @@ const InputPage = () => {
             <input
               type="text"
               className="form-control"
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={(e) => setUsername(e.currentTarget.value)}
               value={username}
               placeholder="Enter your username"
             />

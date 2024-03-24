@@ -1,0 +1,125 @@
+.main-container {
+  font-family: Arial, sans-serif;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.candidate-filter-container {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter-input {
+  flex: 1;
+  margin-right: 10px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.search-button {
+  padding: 8px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.candidate-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.candidate-table th,
+.candidate-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.candidate-table th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.candidate-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.candidate-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+.signout-btn{
+  color: black;
+  display: flex;
+  justify-content: end;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.candidate-filter-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Distribute items evenly along the main axis */
+    margin-top: 40px;
+    margin-left: 10px;
+    width:90%
+  }
+  
+  .filter-input {
+    margin-bottom: 10px;
+    width: 100px;
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+     /* Take equal width on larger screens */
+  }
+  
+  .search-button {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* flex: 0 0 100%; Take full width on larger screens */
+  }
+  
+  .filtered-candidates-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .candidate-item {
+    margin-bottom: 5px;
+  }
+  
+  /* Media queries for responsiveness */
+  @media only screen and (max-width: 767px) {
+    .candidate-filter-container {
+      flex-direction: row; 
+     
+   }
+  
+    .filter-input {
+      width: 200px; /* Adjust width for filter inputs on smaller screens */
+      margin-right: 5px; 
+
+    }
+  
+    .search-button {
+      width: 200px; /* Adjust width for search button on smaller screens */
+      margin-right: 0; /* Remove margin right on search button */
+    }
+  }
+  
