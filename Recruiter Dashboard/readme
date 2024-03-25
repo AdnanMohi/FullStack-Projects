@@ -1,0 +1,102 @@
+# Recruiter Dashboard (MERN)
+
+Hi,My name is "Adnan Dar", I have created this "MERN Recruiter Dashboard" 
+Welcome to the Recruiter Dashboard, a MERN stack application for managing recruitment processes efficiently. This application is designed to help recruiters and hiring managers streamline their workflow by providing features for managing candidate data, job postings, and more.
+
+## Table of Contents
+
+- [Features](#features)
+- [Dependencies](#dependencies)
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+  - [Running the Application](#running-the-application)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Features
+
+- **Candidate Management**: Add, edit, and search candidate profiles with ease.
+- **Job Postings**: Create and manage job postings, including details such as job title, location, salary, and required experience.
+- **Filtering and Searching**: Filter candidates based on various criteria and search for specific candidates or job postings.
+- **Authentication**: Secure authentication system for users with features like sign-in, sign-out, and session management.
+- **Responsive Design**: User-friendly interface that works seamlessly across devices of all sizes.
+
+## Dependencies
+
+The project relies on the following technologies and dependencies:
+
+- **Frontend**:
+  - React
+  - React Router
+  - React-Router-Dom
+  - React-query
+  - Ant Design (for UI components)
+- **Backend**:
+  - Node.js
+  - Express.js
+  - MongoDB (with Mongoose ORM)
+- **Authentication**:
+  - JSON Web Tokens (JWT) for authentication
+- **Other Tools**:
+  - Axios (for making HTTP requests)
+  - uuid (for form password security)
+  - Zod (for form validation)
+
+## Getting Started
+
+Follow these instructions to get the project up and running on your local machine.
+
+### Installation
+
+ use npm or vite and install the dependencies 
+
+ ### configuration
+Backend Configuration:
+
+  Create a .env file in the server directory.
+  Define environment variables such as PORT, MONGODB_URI, and JWT_SECRET.
+
+Frontend Configuration:
+
+  create api instance with react query and use mutation and query for api handling.
+
+ ### Running the Application
+
+ start the backend server along with mongodb and port 
+
+ cd server
+ node index
+
+ start the frontend development server
+ cd dashboard
+ npm run or npm run dev
+
+
+## usage
+
+. Register or sign in to access the dashboard functionalities.
+. Add candidates, create job postings, and manage recruitment tasks efficiently.
+. Utilize the filtering and searching features to find relevant candidates or job postings.
+. Explore the responsive design across different devices for a seamless user experience.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+
+Fork the repository
+Create a new branch (git checkout -b feature/improvement)
+Make your changes and commit them (git commit -am 'Add new feature')
+Push to the branch (git push origin feature/improvement)
+Create a new Pull Request
+Please ensure that your pull request adheres to the project's coding standards and guidelines.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+
+
+

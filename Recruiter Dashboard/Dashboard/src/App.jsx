@@ -5,15 +5,16 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import {  AuthProvider} from './Auth/AuthProvider';
 import { Navigate } from 'react-router';
 
+
 function App() {
+
+
   return (
     <AuthProvider>
     <Routes>
-      {/* Set /signin as the default route */}
+    
       <Route path="/" element={<Navigate to="/signin" />} />
-      {/* Route for signing in */}
-      <Route path="/signin" element={<SignInScreen />} />
-      {/* Protected route for the dashboard */}
+      <Route path="/signin" element={ <SignInScreen />} />
       <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
   </AuthProvider>

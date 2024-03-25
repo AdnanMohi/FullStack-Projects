@@ -9,5 +9,6 @@ router.post('/signup', controller.handleSignup)
 router.post('/signin', controller.handleSignin)
 router.post('/candidate', controller.handleCandidate)
 router.get('/candidateData', controller.getCandidates)
+router.get('/profile', controller.handleUserProfile)
 
 module.exports = router;

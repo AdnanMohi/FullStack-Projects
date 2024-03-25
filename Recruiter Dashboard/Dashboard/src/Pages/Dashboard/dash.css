@@ -1,3 +1,15 @@
+
+.header{
+  margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 0px;
+    cursor: pointer;
+    height: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
 .main-container {
   font-family: Arial, sans-serif;
 }

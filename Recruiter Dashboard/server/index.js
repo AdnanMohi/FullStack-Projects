@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 const port = process.env.port;
 const authRouter = require('./routes/auth');
-
+const authenticationMiddleware = require('./middlewares/auth');
 
 //mongodb connection
 mongoose.connect(process.env.MONGODB_URL)
@@ -19,6 +19,7 @@ mongoose.connect(process.env.MONGODB_URL)
 // middleware
 app.use(cors());
 app.use(express.json());
+app.use(authenticationMiddleware());
 
 //routes
 app.use('/api/v1/auth',authRouter );

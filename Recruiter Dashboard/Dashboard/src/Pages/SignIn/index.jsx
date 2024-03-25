@@ -18,8 +18,7 @@ const SignInScreen = () => {
     e.preventDefault();
 
     try {
-      const response = await signInUserAsync({ email, password });
-      console.log(response);
+      const {data} = await signInUserAsync({ email, password });
       
       // Direct navigation to the dashboard route
       navigate('/dashboard');
@@ -50,7 +49,13 @@ const SignInScreen = () => {
             type="email"
             id="email"
             name="email"
-            required
+            rules={[
+              {
+                required: true,
+                message: 'Please input your password!',
+              },
+            ]}
+
           />
           <label htmlFor="password">Password</label>
           <Input

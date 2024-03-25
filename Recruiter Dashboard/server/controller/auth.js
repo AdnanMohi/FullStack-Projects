@@ -136,9 +136,27 @@ const getCandidates = async (req, res) => {
   }
 };
 
+//get user profile data
+const handleUserProfile = async (req, res) => {
+  const user = req.user;
+  if(!user){
+      return res.status(401).json({message: 'Unauthorized'})
+  }
+  const userInDb = await User.findById(user._id);
+  return res.json({
+   profile:{
+       firstName: userInDb.firstName,
+       lastName: userInDb.lastName,
+       email: userInDb.email,
+       role: userInDb.role
+   }
+  })
+}
+
 module.exports = {
   handleSignup,
   handleSignin,
   handleCandidate,
   getCandidates,
+  handleUserProfile,
 };

@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { apiV1Instance } from '../../api';
 
+
 export const useCandidate = () => {
   const query = useQuery({
     queryKey: ['candidates'],

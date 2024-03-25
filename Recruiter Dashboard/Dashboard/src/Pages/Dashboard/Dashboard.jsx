@@ -4,10 +4,11 @@ import './dash.css';
 import { Button } from 'antd';
 import { useAuth } from '../../Auth/AuthProvider';
 import { useNavigate } from 'react-router-dom';
-
+ import { useCurrentUser } from '../../hooks/query/profile';
 
 
 const Dashboard = () => {
+  const { user } = useCurrentUser();
   const { signOut } = useAuth();
   const navigate = useNavigate();
   const { data: candidates, error, isLoading } = useCandidate();
@@ -72,13 +73,27 @@ const Dashboard = () => {
     signOut();
     navigate('/signin', { replace: true });
   };
+  const [showButton, setShowButton] = useState(false);
+  const showSignOutButton = () => {
+    setShowButton(true);
+  };
+  const hideSignOutButton = () => {
+    setShowButton(false);
+  };
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error fetching candidate data: {error.message}</div>;
 
+
+
   return (
     <div className="main-container">
-      <Button onClick={handleSignOut}>Sign Out</Button>
+      <nav className="header">
+      <div onMouseEnter={showSignOutButton} onMouseLeave={hideSignOutButton}>
+        <h4>Welcome, {user.firstName}</h4>
+        {showButton && <Button onClick={handleSignOut}>Sign Out</Button>}
+      </div>
+      </nav>
       <h1 className="heading">Candidate Data</h1>
       <div className="candidate-filter-container">
         {/* Input fields for filtering criteria */}

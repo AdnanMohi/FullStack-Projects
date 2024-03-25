@@ -11,6 +11,12 @@ export const useSignInUser = () => {
     });
     
     return data;
+    },
+    onSuccess:({data}) => {
+        console.log(data);
+    const token  = data.data.token;
+      localStorage.setItem('token', token);
+     
     }
     });
     return mutation;
